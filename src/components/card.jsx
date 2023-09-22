@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Card({ image, name }) {
+function Card({ onClick, image, name }) {
   const styles = {
     card: {
       width: '20%',
@@ -24,13 +24,13 @@ function Card({ image, name }) {
     },
     name: {
       fontWeight: 'bold',
-      fontSize: '1.5rem',
+      fontSize: '1.5vw',
       textAlign: 'center'
     }
   };
 
   return (
-    <div style={styles.card}>
+    <div onClick={onClick} style={styles.card}>
       <img src={image} alt={name} style={styles.image} />
       <div style={styles.name}>{name}</div>
     </div>
